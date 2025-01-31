@@ -1,6 +1,5 @@
 pipeline {
   agent any
-
   stages {
     stage('Hello') {
       steps {
@@ -9,9 +8,9 @@ pipeline {
     } 
     stage('Build') {
       steps {
-        withCredentials([string(credentialsID: 'mysecret',variable: 'mysecret')]){
-        echo 'mysecret'
-         }
+         withCredentials([string(credentialsID: 'mysecret', variable: 'mysecret')]){
+         echo mysecret
+        }
       }
     }
   }
