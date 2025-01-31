@@ -6,6 +6,12 @@ pipeline {
       steps {
         echo 'Hello World'
       }
+    } 
+    stage('Build') {
+      steps {
+        withCredential
+        echo 'mysecret'
+      }
     }
   }
 }
