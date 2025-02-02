@@ -8,9 +8,9 @@ pipeline {
     } 
     stage('Build') {
       steps {
-        withCredentials([string(credentialsId: 'git-credential', variable: 'GIT_CREDS')]) {
+        withCredentials([string(credentialsId: 'mysecret', variable: 'mysecret')]) {
           // Use the GIT_CREDS variable here, for example to configure git authentication
-          echo "Using credentials"
+          echo mysecret
        }
      }
     }
