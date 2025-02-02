@@ -9,7 +9,7 @@ pipeline {
     stage('Build') {
       steps {
         withCredentials([string(credentialsID: 'mysecret', variable: 'mysecret')]){
-        echo mysecret
+          echo mysecret
         }
       }
     }
